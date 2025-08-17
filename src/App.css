@@ -148,7 +148,7 @@
   font-size: 30px;
   margin-top: 7%;
 }
-#img{
+#img {
   width: 36%;
   height: 550px;
   margin-top: 10%;
@@ -160,16 +160,71 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
 }
-#h2{
+
+#h2 {
   margin-left: 53%;
   font-size: 5rem;
   margin-top: -35%;
 }
-#p2{
+
+#p2 {
   margin-left: 53%;
   font-size: 1rem;
   margin-top: -5%;
   color: rgb(61, 61, 61);
+}
+
+/* ✅ Responsive CSS */
+
+/* Tablet (<=1024px) */
+@media (max-width: 1024px) {
+  #img {
+    width: 45%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 8%;
+  }
+  #h2 {
+    margin-left: 55%;
+    font-size: 3rem;
+    margin-top: -28%;
+  }
+  #p2 {
+    margin-left: 55%;
+    font-size: 0.9rem;
+    margin-top: -4%;
+  }
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+  #img {
+    width: 70%;
+    height: auto;
+    margin: 5% auto;
+    display: block;
+  }
+  #h2 {
+    margin: 5% auto 2% auto;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  #p2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile (<=480px) */
+@media (max-width: 480px) {
+  #h2 {
+    font-size: 2rem;
+  }
+  #p2 {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
 }
 
 .splash-screen {
