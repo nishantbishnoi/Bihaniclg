@@ -1,0 +1,201 @@
+/* Hero Section */
+.hero#con1 {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay Content */
+.ov1 {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+.ov1 .logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  margin: 40px 5% 20px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.breadcrumb a {
+  color: #c0392b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #a72c1c;
+}
+
+.breadcrumb span {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Contact Section Layout */
+.contact-container {
+  padding: 20px 5% 60px;
+  font-family: "Georgia", serif;
+}
+
+.contact-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Main Info */
+.contact-main {
+  flex: 1 1 60%;
+}
+
+.contact-main h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+
+.school-block {
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease;
+}
+
+.school-block h2 {
+  color: #c0392b;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.school-block a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.school-block a:hover {
+  color: #c0392b;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar */
+.section-links {
+  flex: 1 1 30%;
+  border-left: 1px solid #ccc;
+  padding-left: 30px;
+}
+
+.section-links h3 {
+  color: #c0392b;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.section-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section-links li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.section-links a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.section-links a:hover {
+  color: #c0392b;
+  transform: translateX(5px);
+}
+
+.section-links .active {
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .section-links {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .contact-main h1 {
+    font-size: 2rem;
+  }
+
+  .school-block h2 {
+    font-size: 1.2rem;
+  }
+
+  .ov1 h1 {
+    font-size: 1.5rem;
+  }
+
+  .ov1 p {
+    font-size: 0.9rem;
+  }
+
+  .ov1 .logo {
+    width: 80px;
+  }
+}

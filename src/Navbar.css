@@ -1,0 +1,79 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 999;
+}
+
+/* Menu Container (text + dot icon) */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+/* MENU Text */
+.menu-text {
+  color: #c0392b;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Red Circle with Dots */
+.menu-circle {
+  background: #c0392b;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3x3 Dot Grid */
+.dot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 6px);
+  grid-gap: 4px;
+}
+
+.dot-grid span {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Hover effects on pointer devices */
+@media (hover: hover) {
+  .menu-container:hover {
+    transform: scale(1.05);
+  }
+
+  .menu-circle:hover {
+    background-color: #a22;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .menu-text {
+    display: none;
+  }
+
+  .menu-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dot-grid span {
+    width: 5px;
+    height: 5px;
+  }
+}

@@ -1,0 +1,79 @@
+.journey-section {
+  height: 100vh;
+  margin-top: 11%;
+  background-color: #2f3337;
+  color: white;
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Big number background animation */
+.big-number {
+  font-size: 50vw;
+  font-weight: bolder;
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  transform: translate(-50%, -50%) scale(0.8);
+  color: rgba(255, 0, 0, 0.2); /* Start red */
+  opacity: 0;
+  transition: 
+    transform 1.2s ease,
+    opacity 1.2s ease,
+    color 1.5s ease 1.2s; /* After fade in, change color */
+}
+
+/* Text block */
+.text {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
+}
+
+.text .line {
+  width: 60px;
+  height: 2px;
+  background: white;
+}
+
+.inner-text {
+  text-align: center;
+}
+
+.small {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  margin: 2px 0;
+}
+
+.journey {
+  font-size: 3rem;
+  font-style: italic;
+  margin: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.journey:hover {
+  color: #fff066;
+}
+
+/* Visible state triggers animation */
+.journey-section.visible .big-number {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  color: rgba(255, 255, 255, 0.08); /* End in grayish */
+}
+
+.journey-section.visible .text {
+  opacity: 1;
+  transform: translateY(0);
+}
